@@ -1,14 +1,14 @@
 /*
 How it should work
--User enters their desired zip code
+-User enters their desired zip code in input field
 API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
-
--App obtains and displays current weather conditions including:
-	
+-User clicks submit button
+-App makes AJAX call to API for information
+-App obtains current weather information for desired zip code 
+-App displays current weather conditions on page including:
 	^weather.value (weather name)
 	^temperature.value (temperature)
 	^temperature.unit=imperial (Temperature Unit of measurement Fahrenheit)
-
 -
 */
 
