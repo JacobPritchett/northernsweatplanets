@@ -1,0 +1,35 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #F5F5F5;
+  background-image: url("http://www.publicdomainpictures.net/pictures/40000/velka/fluffy-clouds.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #333333;
+}
+#main-text {
+  background-color: white;
+}
+#sidebar {
+  background-color: white;
+}
+#logo-nav:hover {
+  filter: invert(100%);
+}
+#logorow
+{
+  background-color: #ffffff;
+  opacity: .7;
+}
