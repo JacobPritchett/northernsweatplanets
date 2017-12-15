@@ -1,5 +1,7 @@
 /*
 How it should work
+!!!--- Weather API ---!!!
+
 -User enters their desired zip code in input field
 API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
 -User clicks submit button
@@ -9,26 +11,71 @@ API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
 	^weather.value (weather name)
 	^temperature.value (temperature)
 	^temperature.unit=imperial (Temperature Unit of measurement Fahrenheit)
--
+-When weather API response is received, response is compared against conditions to be met to establish a value
+-App stores response value
+
+!!!--- Music API ---!!!
+
+-AJAX call is made to music API for playlist associated with response value
+-App obtains the playlist and displays it on the page
 */
+    
+    
+    // $(document).ready(function() {
+    //   //onclick event
+    //   $("#sub-btn").on("click", function(event) {
 
-	// This is the API key.
-    var APIKey = "a6430856a01a213e7e44f9a6de2db019";
+    //     event.preventDefault();
+    //     console.log("clicked submit");
+    //     //Current Zip Code Variable
+    //     var zipInput = $("#zip").val().trim();
+        
+    //     // This is the URL we need to query the openweathermap database
+    //     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipInput +
+    //     ",us&units=imperial&appid=3413b3e1da8ab7799aca6d371de17aa6";
 
-    // This is the URL we need to query the openweathermap database
-    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCaptured + ",Burundi&appid=" + APIKey;
+    //     // Our AJAX call
+    //     $.ajax({
+    //     url: weatherURL,
+    //     method: "GET"
+    //     }).done(function(response) {
 
-    // Our AJAX call
-    $.ajax({
+    //       var results = response.data;
+        
+    //     // Console Log the weatherURL to check it
+    //     console.log(weatherURL);
+    //     // Console log of the resulting database response object
+    //     console.log(results);
+        
+    //     });
+     
+    //   });
+    // });
+    
+
+    //onclick event
+    $(document).on("click", "#sub-btn", function(event) {
+
+      event.preventDefault();
+      
+      //Current Zip Code Variable
+      var zipInput = $("#zip").val().trim();
+      
+      // This is the URL we need to query the openweathermap database
+      var weatherURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipInput +
+      ",us&units=imperial&appid=3413b3e1da8ab7799aca6d371de17aa6";
+
+      // Our AJAX call
+      $.ajax({
       url: weatherURL,
       method: "GET"
-    }).done(function(response) {
-
+      }).done(function(response) {
+      
       // Console Log the weatherURL to check it
       console.log(weatherURL);
       // Console log of the resulting database response object
       console.log(response);
-
+      
+      });
+     
     });
-
-
