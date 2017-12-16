@@ -8,19 +8,19 @@ API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
 -App makes AJAX call to API for information
 -App obtains current weather information for desired zip code 
 -App displays current weather conditions on page including:
-	^weather.value (weather name)
-	^temperature.value (temperature)
-	^temperature.unit=imperial (Temperature Unit of measurement Fahrenheit)
+	^weather.description (weather description)
+	^main.temp (temperature)
 -When weather API response is received, response is compared against conditions to be met to establish a value
 -App stores response value
 
 !!!--- Music API ---!!!
 
--AJAX call is made to music API for playlist associated with response value
+-AJAX call is made to music API for playlist associated with "weather.main" value
 -App obtains the playlist and displays it on the page
 */
     
-    
+/* OPTION 1  This is a better option for when you have multiple clicks
+
     // $(document).ready(function() {
     //   //onclick event
     //   $("#sub-btn").on("click", function(event) {
@@ -51,7 +51,7 @@ API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
      
     //   });
     // });
-    
+*/   
 
     //onclick event
     $(document).on("click", "#sub-btn", function(event) {
@@ -75,6 +75,10 @@ API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
       console.log(weatherURL);
       // Console log of the resulting database response object
       console.log(response);
+
+      $(".city").text("Location: " + response.name);
+      $(".temperature").text("Temperature (F): " + response.main.temp);
+      $(".weather").text("What to expect: " + response.weather.description);
       
       });
      
