@@ -83,5 +83,4 @@ YouTube API Key ==========>  AIzaSyAK4v45I2JEwBV4XuTQml9Vlqx7zVYynak
       $(".weather").text("What to expect: " + response.weather[0].description);
       
       });
-     
     });
