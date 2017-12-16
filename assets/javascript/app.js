@@ -15,6 +15,8 @@ API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
 
 !!!--- Music API ---!!!
 
+YouTube API Key ==========>  AIzaSyAK4v45I2JEwBV4XuTQml9Vlqx7zVYynak
+
 -AJAX call is made to music API for playlist associated with "weather.main" value
 -App obtains the playlist and displays it on the page
 */
@@ -78,7 +80,7 @@ API Call Example: api.openweathermap.org/data/2.5/weather?zip={zip code}
 
       $(".city").text("Location: " + response.name);
       $(".temperature").text("Temperature (F): " + response.main.temp);
-      $(".weather").text("What to expect: " + response.weather.description);
+      $(".weather").text("What to expect: " + response.weather[0].description);
       
       });
      
