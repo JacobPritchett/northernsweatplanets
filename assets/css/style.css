@@ -33,3 +33,11 @@ body {
   background-color: #ffffff;
   opacity: .7;
 }
+
+iframe{
+ display: block;
+ width: 800px;
+ height: 400px;
+ margin: 0 auto;
+ border: 0; 
+}
