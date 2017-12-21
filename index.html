@@ -8,9 +8,10 @@
     <!-- CSS FILES -->
     <!--Our CSS Reset Stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    
+
     <!--Bootstrap CSS CDN-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
 
     <!--Bootswatch Stylesheet-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/litera/bootstrap.min.css">
@@ -25,29 +26,35 @@
 
     <!--JQuery CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
     <!--Popper JS CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    
+
     <!--Bootstrap Javascript CDN-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 
     <!--Our Javascript App file-->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    
+
 </head>
 
 <body id="page-top">
     <!--This is the navbar with mobile responsive dropdown-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/images/logo_small.png" height="20"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo_small.png" height="20">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
                     <a class="nav-item nav-link" href="#">Contact Us</a>
                 </div>
             </div>
@@ -72,16 +79,18 @@
                 <h1>Music for your weather.</h1>
                 <p></p>
                 <p>Other stuff will go here.</p>
-                <p>This paragraph is a placeholder paragraph for other paragraphs yet to come. Many, many people have told me that this is the best paragraph that they have ever seen.</p>
+                <p>This paragraph is a placeholder paragraph for other paragraphs yet to come. Many, many people have told me
+                    that this is the best paragraph that they have ever seen.</p>
                 <!--This is the search field and submit button-->
-                <div class="form-row">
-                <div class="form-group-md-3">
-  <label class="col-form-label" for="inputDefault">Enter your zip code!</label>
-  <input class="form-control" placeholder="e.g. 85281" id="zip" type="number">
-</div>
-</div>
-                <button type="button" class="btn btn-primary btn-lg" id="sub-btn">Submit</button>
-                <p></p>
+                <div class="col-md-4">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Zip code..." aria-label="Zip code..." id="zip">
+                      <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button" id="sub-btn">Go!</button>
+                      </span>
+                    </div>
+                  </div>
+                  <p></p>
             </div>
             <div class="col-md-1 pt-2 mb-5">
             </div>
