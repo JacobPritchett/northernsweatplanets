@@ -34,6 +34,10 @@
 
     <!--Our Javascript App file-->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <!--GOOGLE fonts-->
+
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800|Raleway:700,800,900" rel="stylesheet">
     
 </head>
 
@@ -75,12 +79,16 @@
                 <p>Other stuff will go here.</p>
                 <p>This paragraph is a placeholder paragraph for other paragraphs yet to come. Many, many people have told me that this is the best paragraph that they have ever seen.</p>
                 <!--This is the search field and submit button-->
-                <div class="form-group">
-  <label class="col-form-label" for="inputDefault">Enter your zip code!</label>
-  <input class="form-control" placeholder="e.g. 85281" id="zip" type="number">
-</div>
-                <button type="button" class="btn btn-primary btn-lg" id="sub-btn">Submit</button>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Zip code..." aria-label="Zip code..." id="zip">
+                    <span class="input-group-btn">
+                     <button class="btn btn-secondary" type="button" id="sub-btn">Go!</button>
+                    </span>
+                </div>
+            </div>
                 <p></p>
+            
             </div>
             <div class="col-md-1 pt-2 mb-5">
             </div>
@@ -89,15 +97,18 @@
             <div class="col-md-3 pt-2 mb-5 text-center" id="sidebar">
                 <h1>Current Conditions</h1>
                 <br>
-                <p class="city"></p>
-                <p class="temperature"></p>
-                <p class="weather"></p>
+                <p id="intro">
+                    Your ZIP and the WEATHERMOOD music !
+                </p>
+                <p id="conditions"></p>
+                <p id="temperature"></p>
 
             </div>
         </div>
-    </div>
-        <div id="player"></div>
-        <div class="row mt-3">
+        <div class="row">
+            <div class="col-md-12" id="tubeplayer">
+            <div id="player"></div>
+            
 
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.

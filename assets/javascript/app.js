@@ -78,10 +78,11 @@ YouTube API Key ==========>  AIzaSyAK4v45I2JEwBV4XuTQml9Vlqx7zVYynak
       // Console log of the resulting database response object
       console.log(response);
 
-      $(".city").text("Location: " + response.name);
-      $(".temperature").text("Temperature (F): " + response.main.temp);
-      $(".weather").text("What to expect: " + response.weather[0].description);
-      
+      $('#intro').remove();
+      $('#conditions').text("It's " + response.weather[0].description + " in " + response.name + ".");
+      // $("#city").text("Location: " + response.name);
+      $("#temperature").text(response.main.temp + "°F");
+      // $("#weather").text("What to expect: " + response.weather[0].description);
       });
      
     });
