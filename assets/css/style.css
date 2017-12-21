@@ -22,6 +22,12 @@ body {
 #main-text {
   background-color: white;
 }
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #1d1d1d;
+  font-size: 20px;
+  font-weight: 400; 
+}
 #sidebar {
   background-color: white;
   min-height: 350px;
