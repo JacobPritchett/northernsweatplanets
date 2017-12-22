@@ -83,21 +83,6 @@ YouTube API Key ==========>  AIzaSyAK4v45I2JEwBV4XuTQml9Vlqx7zVYynak
       // $("#city").text("Location: " + response.name);
       $("#temperature").text(response.main.temp + "°F");
       // $("#weather").text("What to expect: " + response.weather[0].description);
+      
       });
-     
     });
-
-
-    // var player;
-      function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-      height: '390',
-      width: '640',
-      videoId: 'M7lc1UVf-VE',
-      events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
