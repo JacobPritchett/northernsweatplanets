@@ -8,9 +8,10 @@
     <!-- CSS FILES -->
     <!--Our CSS Reset Stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    
+
     <!--Bootstrap CSS CDN-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
 
     <!--Bootswatch Stylesheet-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.2/litera/bootstrap.min.css">
@@ -25,31 +26,39 @@
 
     <!--JQuery CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
     <!--Popper JS CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    
+
     <!--Bootstrap Javascript CDN-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 
     <!--Our Javascript App file-->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    
+
+    <!--Our Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800|Raleway:700,800,900" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
     <!--This is the navbar with mobile responsive dropdown-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/images/logo_small.png" height="20"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo_small.png" height="20">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
                     <a class="nav-item nav-link" href="#">Contact Us</a>
-               
                 </div>
             </div>
         </div>
@@ -73,14 +82,19 @@
                 <h1>Music for your weather.</h1>
                 <p></p>
                 <p>Other stuff will go here.</p>
-                <p>This paragraph is a placeholder paragraph for other paragraphs yet to come. Many, many people have told me that this is the best paragraph that they have ever seen.</p>
+                <p>This paragraph is a placeholder paragraph for other paragraphs yet to come. Many, many people have told me
+                    that this is the best paragraph that they have ever seen.</p>
                 <!--This is the search field and submit button-->
-                <div class="form-group">
-  <label class="col-form-label" for="inputDefault">Enter your zip code!</label>
-  <input class="form-control" placeholder="e.g. 85281" id="zip" type="number">
-</div>
-                <button type="button" class="btn btn-primary btn-lg" id="sub-btn">Submit</button>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Zip code..." aria-label="Zip code..." id="zip">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button" id="sub-btn">Go!</button>
+                        </span>
+                    </div>
+                </div>
                 <p></p>
+
             </div>
             <div class="col-md-1 pt-2 mb-5">
             </div>
@@ -89,13 +103,75 @@
             <div class="col-md-3 pt-2 mb-5 text-center" id="sidebar">
                 <h1>Current Conditions</h1>
                 <br>
-                <p class="city"></p>
-                <p class="temperature"></p>
-                <p class="weather"></p>
+                <p id="intro">
+                    Give us your zip code and we'll give you your music!
+                </p>
+                <p id="conditions"></p>
+                <p id="temperature"></p>
+
 
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12" id="tubeplayer">
+                <div class="container">
+                    <div id="login">
+                      <a id="loginButton" href="https://accounts.spotify.com/en/authorize?client_id=ac13022d304b457b9c1309fbc1a0850e&response_type=token&redirect_uri=http:%2F%2Fweathermood.000webhostapp.com%2Findex.html&scope=user-read-private%20user-read-email&show_dialog=true" class="btn btn-primary">Log in with Spotify</a>
+                    </div>
+                    <div id="loggedin">
+                      <div id="user-profile">
+                      </div>
+                      <div id="oauth">
+                      </div>
+                      <button class="btn btn-default" id="playlist">Show Playlist</button>
+                    </div>
+                  </div>
+                  <input type="text" id="searchText" >
+                  <script>
+                    if(window.location.hash) {
+                        var tknParse = window.location.hash; //Puts hash in variable, and removes the # character
+                        var access_token = tknParse.substr(14,tknParse.indexOf("&")-14);
+                        $("#searchText").show();
+                        $("#playlist").show();
+                        $("#login").hide();
+                        // hash found
+                    } else {
+                        // No hash found
+                    }
+        
+                    $("#playlist").click(function(){
+                        var txt = $("#searchText").val();
+                        var url = 'https://api.spotify.com/v1/search?q='+txt+'&type=playlist';
+                    $.ajax({
+                        type: "GET",
+                        url: url,
+                        headers: {
+                            'Authorization': 'Bearer ' + access_token
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            var results = response.playlists.items;
+                            for (var i=0;i <results.length;i++){
+                                var result = results[i].external_urls.spotify;
+                                var a = document.createElement('a');
+                                var linkText = document.createTextNode(result);
+                                a.appendChild(linkText);
+                                a.title = "my title text";
+                                a.href = result;
+                                document.body.appendChild(a);
+                                var linebreak = document.createElement("br");
+                                document.body.appendChild(linebreak);
+                            }
+                        }
+                    });
+                });
+                  </script>
+            </div>
+        </div>
     </div>
+
+
+
     <footer class="footer">
         <div class="container">
             <span class="text-muted">This is an open app created by Manuel, Mike, and Jacob.</span>
